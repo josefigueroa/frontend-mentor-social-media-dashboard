@@ -1,6 +1,7 @@
 // Initialize modules
 const { src, dest, watch, series } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const imagemin = require('gulp-imagemin');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
@@ -12,11 +13,30 @@ const config = {
 	jsDir: 'dist/js/',
 	cssDir: 'dist/css/',
 	htmlDir: 'dist/',
+	imagesDir: 'dist/images/',
 }
 
 function htmlTask(){
 	return src('src/layout/*.html')
 		.pipe(dest(config.htmlDir));
+}
+
+function imageminTask(){
+	return src('src/images/*')
+			.pipe(imagemin([
+							imagemin.gifsicle({interlaced: true}),
+							imagemin.mozjpeg({quality: 75, progressive: true}),
+							imagemin.optipng({optimizationLevel: 5}),
+							imagemin.svgo({
+									plugins: [
+											{removeViewBox: true},
+											{cleanupIDs: false}
+									]
+							})
+					], 
+					{ verbose: true }
+			))
+			.pipe(dest(config.imagesDir));
 }
 
 // Sass Task
@@ -65,4 +85,4 @@ function watchTask() {
 }
 
 // Default Gulp Task
-exports.default = series(htmlTask, scssTask, jsTask, browserSyncServe, watchTask);
+exports.default = series(htmlTask, imageminTask, scssTask, jsTask, browserSyncServe, watchTask);
