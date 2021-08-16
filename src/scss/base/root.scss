@@ -1,0 +1,7 @@
+@use '../abstratcs/' as *;
+
+:root {
+	@each $key, $value in $theme-fonts {
+		--font-#{$value}: 'Inter-#{$value}';
+	}
+}

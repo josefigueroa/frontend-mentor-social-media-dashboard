@@ -9,7 +9,7 @@ const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
 
 const config = {
-	fontsDir: 'dist/fonts/poppins/',
+	fontsDir: 'dist/fonts/',
 	jsDir: 'dist/js/',
 	cssDir: 'dist/css/',
 	htmlDir: 'dist/',
@@ -19,6 +19,11 @@ const config = {
 function htmlTask(){
 	return src('src/layout/*.html')
 		.pipe(dest(config.htmlDir));
+}
+
+function fontsTask(){
+	return src('src/fonts/**/*.woff')
+		.pipe(dest(config.fontsDir));
 }
 
 function imageminTask(){
@@ -85,4 +90,4 @@ function watchTask() {
 }
 
 // Default Gulp Task
-exports.default = series(htmlTask, imageminTask, scssTask, jsTask, browserSyncServe, watchTask);
+exports.default = series(htmlTask, imageminTask, fontsTask, scssTask, jsTask, browserSyncServe, watchTask);

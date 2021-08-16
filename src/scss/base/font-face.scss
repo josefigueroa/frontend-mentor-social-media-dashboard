@@ -1,0 +1,12 @@
+@use '../abstratcs/' as *;
+
+
+@each $key, $value in $theme-fonts {
+	@font-face {
+		font-family: 'Inter-#{$value}';
+		font-weight: (#{$key});
+		src:
+			local(#{$value}),
+			url('../../fonts/inter/Inter-#{$value}.woff') format('woff'); /* Modern Browsers */		
+	}
+}
