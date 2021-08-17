@@ -1,0 +1,22 @@
+@use '../abstratcs/' as *;
+
+h1,
+h2 {
+	margin-top: 0;
+	line-height: 1.1;
+}
+
+h1,
+.h1 {
+	font-size: rem(24);
+	margin-bottom: rem(3);
+	@include breakpoint(large) {
+		font-size: rem(28);
+	}
+}
+
+h2,
+.h2 {
+	font-size: rem(24);
+	margin-bottom: rem(24);
+}

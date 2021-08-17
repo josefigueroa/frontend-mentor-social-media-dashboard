@@ -1,7 +1,19 @@
 @use '../abstratcs/' as *;
 
 :root {
+	--body-bg: var(--white);
+	--body-bg-secondary: var(--zircon);
+	--color-primary: var(--comet);
+	--color-secondary: var(--charade);
+	--toggle-bg-start: var(--pictonBlue);
+	--toggle-bg-end: var(--screaminGreen);
+	--toggle-bg: var(--cadetBlue);
+
+	@each $key, $value in $colors {
+		--#{$key}: #{$value};
+	}	
+
 	@each $key, $value in $theme-fonts {
 		--font-#{$value}: 'Inter-#{$value}';
-	}
+	}	
 }

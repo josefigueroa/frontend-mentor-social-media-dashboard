@@ -1,21 +1,46 @@
-// 576px, 768px, 992px, 1200px, 1400px
+//COLORS
+$colors: (
+	'blueBell':hsl(228, 34%, 66%),
+	'steelGray':hsl(232, 19%, 15%),
+	'charade': hsl(230, 17%, 14%),
+	'ebonyClay': hsl(228, 28%, 20%),
+	'limeGreen': hsl(163, 72%, 41%),
+	'screaminGreen': hsl(146, 68%, 55%),
+	'red':  hsl(348, 97%, 39%),
+	'brightRed': hsl(356, 69%, 56%),
+	'blue': hsl(203, 89%, 53%),
+	'dodgerBlue': hsl(208, 92%, 53%),
+	'pictonBlue': hsl(210, 78%, 56%),
+	'koromiko': hsl(37, 97%, 70%),
+	'cerise':hsl(329, 70%, 58%),
+	'whiteLilac':	hsl(227, 47%, 96%),
+	'zircon':hsl(225, 100%, 98%),
+	'white': hsl(0, 0%, 100%),
+	'cadetBlue': hsl(230, 22%, 74%),
+	'comet': hsl(228, 12%, 44%)
+	);
+
+
+//BREAKPOINTS
+// 576px, 768px, 992px, 1200px, 1440px
 $breakpoints-up: (
   'small': '36em',
 	'medium': '48em',
 	'large': '62em',
 	'xlarge': '75em',
-	'xxlarge': '87.5em'
+	'xxlarge': '90em'
 );
 
-// 575px, 767px, 991px, 1199px, 1399px
+// 575px, 767px, 991px, 1199px, 1439px
 $breakpoints-down: (
 	'small': '35.9375em',
 	'medium': '47.9375em',
 	'large': '61.9375em',
 	'xlarge': '75.9375em',
-	'xxlarge': '87.4375em'
+	'xxlarge': '89.9375em'
 );
 
+//SPACERS
 $spacer: 1rem;
 
 $spacer: (
@@ -27,6 +52,7 @@ $spacer: (
   5: ($spacer * 3)
 );
 
+//FONTS
 $theme-fonts: (
 	100: 'Thin',
 	200: 'ExtraLight',
@@ -38,3 +64,9 @@ $theme-fonts: (
 	800: 'ExtraBold',
 	900: 'Black'
 );
+
+$font-family-base: map-get($theme-fonts, 400);
+$font-family-bold: map-get($theme-fonts, 700);
+
+$font-size-base: 14px;
+
