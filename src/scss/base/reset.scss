@@ -33,6 +33,20 @@ body {
 	text-rendering: optimizeSpeed;
 }
 
+fieldset{
+	margin: 0;
+}
+
+input,
+textarea,
+button,
+select,
+fieldset,
+div,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 // /* A elements that don't have a class get default styles */
 // a:not([class]) {
 // 	text-decoration-skip-ink: auto;
