@@ -6,10 +6,10 @@ export class Theme {
   init(){
     let getTheme = this.storage;
     if(getTheme === 'on'){
-      document.querySelector('html').setAttribute('theme', 'dark');
+      document.body.setAttribute('data-theme', 'dark');
       document.querySelector('input[name="theme"]').checked = true;    
     }else{
-      document.querySelector('html').setAttribute('theme', 'light');
+      document.body.setAttribute('data-theme', 'light');
       document.querySelector('input[name="theme"]').checked = false;   
     }
 
@@ -20,10 +20,10 @@ export class Theme {
     let toggleSwitch = document.querySelector('input[name="theme"]');
     toggleSwitch.addEventListener('change', (event) =>{
       if(event.target.checked){
-        document.querySelector('html').setAttribute('theme', event.target.value);
+        document.body.setAttribute('data-theme', event.target.value);
         localStorage.setItem('theme', 'on');   
       }else{
-        document.querySelector('html').setAttribute('theme', 'light');
+        document.body.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'off');  
       }        
     });
