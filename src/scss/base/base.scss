@@ -1,6 +1,6 @@
 @use '../abstratcs/' as *;
 
-[theme="dark"]{
+html[theme="dark"]{
   --body-bg: var(--charade);
   --body-bg-secondary: var(--steelGray);
 	--color-primary: var(--blueBell);
