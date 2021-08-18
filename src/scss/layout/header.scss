@@ -2,6 +2,7 @@
 
 .header{
   padding-top: rem(40);
+  margin-bottom: rem(40);
   @include breakpoint('large'){
     display: flex;
     justify-content: space-between;
@@ -10,7 +11,7 @@
   }
   &:after{
     content: '';
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -36,12 +37,11 @@
       padding: 0;
       margin-bottom: 0;
     }
-    h1{
-      color: var(--color-secondary);
-    }
   }
   &__info{
     display: flex;
+    font-family: var(--font-Bold);
+    font-size: rem(14);
     dd{
       margin-left: rem(5);
     }

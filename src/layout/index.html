@@ -17,18 +17,240 @@
         </dl>     
       </div>   
       <fieldset class="toggle" aria-label="theme toggle">
-            <label class="toggle__label" for="dark">Dark Mode</label>
-            <div class="toggle__wrapper">
-              <input type="checkbox" name="theme" value="dark" id="dark">
-              <span aria-hidden="true" class="toggle__button"></span>
-            </div>           
+        <label class="toggle__label" for="dark">Dark Mode</label>
+        <div class="toggle__wrapper">
+          <input type="checkbox" name="theme" value="dark" id="dark">
+          <span aria-hidden="true" class="toggle__button"></span>
+        </div>           
       </fieldset>
     </header>
-<!--     
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </div> -->
+    <main class="container">
+      <section>
+        <div class="card-group">
+          <div class="card card--facebook">
+            <div class="card__social">
+              <figure class="card__logo">
+                <img src="images/icon-facebook.svg" alt="Facebook logo">
+              </figure>
+              <span class="card__username">@nathanf</span>
+            </div>
+            <div class="card__count">
+              <span class="card__number card__number--big">1987</span>
+              <span class="card__label">Followers</span>
+            </div>
+            <div class="card__stats card__stats--up">
+              <figure class="card__arrow">
+                <img src="images/icon-up.svg" alt="up arrow">
+              </figure>
+              <span>12 Today</span>
+            </div>
+          </div>
+          <div class="card card--twitter">
+            <div class="card__social">
+              <figure class="card__logo">
+                <img src="images/icon-twitter.svg" alt="Twitter logo">
+              </figure>
+              <span class="card__username">@nathanf</span>
+            </div>
+            <div class="card__count">
+              <span class="card__number card__number--big">1044</span>
+              <span class="card__label">Followers</span>
+            </div>
+            <div class="card__stats card__stats--up">
+              <figure class="card__arrow">
+                <img src="images/icon-up.svg" alt="up arrow">
+              </figure>
+              <span>99 Today</span>
+            </div>
+          </div>
+          <div class="card card--instagram">
+            <div class="card__social">
+              <figure class="card__logo">
+                <img src="images/icon-instagram.svg" alt="Instagram logo">
+              </figure>
+              <span class="card__username">@realnathanf</span>
+            </div>
+            <div class="card__count">
+              <span class="card__number card__number--big">11k</span>
+              <span class="card__label">Followers</span>
+            </div>
+            <div class="card__stats card__stats--up">
+              <figure class="card__arrow">
+                <img src="images/icon-up.svg" alt="up arrow">
+              </figure>
+              <span>1099 Today</span>
+            </div>
+          </div>
+          <div class="card card--youtube">
+            <div class="card__social">
+              <figure class="card__logo">
+                <img src="images/icon-youtube.svg" alt="Youtube logo">
+              </figure>
+              <span class="card__username">Nathan F.</span>
+            </div>
+            <div class="card__count">
+              <span class="card__number card__number--big">8239</span>
+              <span class="card__label">Subscribers</span>
+            </div>
+            <div class="card__stats card__stats--down">
+              <figure class="card__arrow">
+                <img src="images/icon-down.svg" alt="Down arrow">
+              </figure>
+              <span>144 Today</span>
+            </div>
+          </div>       
+        </div>       
+      </section>
+      <section>
+        <h2>Overview - Today</h2>
+        <div class="card-group">
+          <div class="card">
+            <div class="card__row">
+              <span class="card__username">Page Views</span>
+              <figure class="card__logo">
+                <img src="images/icon-facebook.svg" alt="Facebook logo">
+              </figure>
+            </div>
+            <div class="card__row">
+              <span class="card__number card__number--small">87</span>
+              <div class="card__stats card__stats--up">
+                <figure class="card__arrow">
+                  <img src="images/icon-up.svg" alt="up arrow">
+                </figure>
+                <span>3%</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__row">
+              <span class="card__username">Likes</span>
+              <figure class="card__logo">
+                <img src="images/icon-facebook.svg" alt="Facebook logo">
+              </figure>
+            </div>
+            <div class="card__row">
+              <span class="card__number card__number--small">52</span>
+              <div class="card__stats card__stats--down">
+                <figure class="card__arrow">
+                  <img src="images/icon-down.svg" alt="down arrow">
+                </figure>
+                <span>2%</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__row">
+              <span class="card__username">Likes</span>
+              <figure class="card__logo">
+                <img src="images/icon-instagram.svg" alt="Instagram logo">
+              </figure>
+            </div>
+            <div class="card__row">
+              <span class="card__number card__number--small">5462</span>
+              <div class="card__stats card__stats--up">
+                <figure class="card__arrow">
+                  <img src="images/icon-up.svg" alt="up arrow">
+                </figure>
+                <span>2257%</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__row">
+              <span class="card__username">Profile Views</span>
+              <figure class="card__logo">
+                <img src="images/icon-instagram.svg" alt="Instagram logo">
+              </figure>
+            </div>
+            <div class="card__row">
+              <span class="card__number card__number--small">52k</span>
+              <div class="card__stats card__stats--up">
+                <figure class="card__arrow">
+                  <img src="images/icon-up.svg" alt="up arrow">
+                </figure>
+                <span>1375%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-group">
+          <div class="card">
+            <div class="card__row">
+              <span class="card__username">Retweets</span>
+              <figure class="card__logo">
+                <img src="images/icon-twitter.svg" alt="Twitter logo">
+              </figure>
+            </div>
+            <div class="card__row">
+              <span class="card__number card__number--small">117</span>
+              <div class="card__stats card__stats--up">
+                <figure class="card__arrow">
+                  <img src="images/icon-up.svg" alt="up arrow">
+                </figure>
+                <span>303%</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__row">
+              <span class="card__username">Likes</span>
+              <figure class="card__logo">
+                <img src="images/icon-twitter.svg" alt="Twitter logo">
+              </figure>
+            </div>
+            <div class="card__row">
+              <span class="card__number card__number--small">507</span>
+              <div class="card__stats card__stats--down">
+                <figure class="card__arrow">
+                  <img src="images/icon-down.svg" alt="down arrow">
+                </figure>
+                <span>553%</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__row">
+              <span class="card__username">Likes</span>
+              <figure class="card__logo">
+                <img src="images/icon-youtube.svg" alt="Youtube logo">
+              </figure>
+            </div>
+            <div class="card__row">
+              <span class="card__number card__number--small">107</span>
+              <div class="card__stats card__stats--down">
+                <figure class="card__arrow">
+                  <img src="images/icon-down.svg" alt="down arrow">
+                </figure>
+                <span>19%</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__row">
+              <span class="card__username">Total Views</span>
+              <figure class="card__logo">
+                <img src="images/icon-youtube.svg" alt="Youtube logo">
+              </figure>
+            </div>
+            <div class="card__row">
+              <span class="card__number card__number--small">1407</span>
+              <div class="card__stats card__stats--down">
+                <figure class="card__arrow">
+                  <img src="images/icon-down.svg" alt="down arrow">
+                </figure>
+                <span>12%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer container">
+      <p class="footer__attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/josefigueroa/frontend-mentor-social-media-dashboard" target="_blank">Jose Figueroa</a>.
+      </p>     
+    </footer>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>

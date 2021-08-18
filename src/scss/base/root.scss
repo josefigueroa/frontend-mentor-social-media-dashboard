@@ -8,6 +8,9 @@
 	--toggle-bg-start: var(--pictonBlue);
 	--toggle-bg-end: var(--screaminGreen);
 	--toggle-bg: var(--cadetBlue);
+	--card-bg: var(--whiteLilac);
+	--card-bg-hover: var(--snuff);
+	--instagram: linear-gradient(225deg, var(--cerise),var(--apricot) 50.91%,var(--koromiko) 100%);
 
 	@each $key, $value in $colors {
 		--#{$key}: #{$value};

@@ -1,0 +1,138 @@
+@use '../abstratcs/' as *;
+
+.card-group{
+  display: grid;
+	grid-template-columns: 1fr;
+  gap: rem(30);
+  &:not(:last-child){
+    margin-bottom: rem(20);  
+  }
+  
+  @include breakpoint('medium'){
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include breakpoint('large'){
+    grid-template-columns: repeat(4, 1fr);
+    
+    &:not(:last-child){
+      margin-bottom: rem(25);  
+    }
+  }
+}
+
+.card{
+  background: var(--card-bg);
+  padding: rem(25);
+  border-radius: rem(5);
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  &:hover{
+    background: var(--card-bg-hover);
+  }
+
+  &--facebook{
+    border-top: 5px solid var(--dodgerBlue);
+  }
+  &--twitter{
+    border-top: 5px solid var(--blue);
+  }
+  &--instagram{
+    padding-top: rem(30);
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: rem(5);
+      display: block;
+      background: var(--instagram);
+      border-top-left-radius: rem(5);
+      border-top-right-radius: rem(5);
+    }
+  }
+  &--youtube{
+    border-top: 5px solid var(--red);
+  }
+
+  &__social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: rem(30);
+  }
+
+  &__logo{
+    margin: 0;
+    height: 20px;
+    width: 20px;
+  }
+
+  &__username{
+    font-size: rem(12);
+    font-family: var(--font-Bold);
+    margin-left: rem(8);
+  }
+
+  &__count{
+    margin-bottom: rem(25);
+  }
+
+  &__number{
+    display: inline-block;
+    color: var(--color-secondary);
+    font-family: var(--font-Bold);
+    letter-spacing: rem(-2);
+		line-height: 1;
+    margin-bottom: rem(4);    
+    &--big{
+      font-size: rem(56);
+    }
+    &--small{
+      font-size: rem(32);
+    }
+  }
+  &__label{
+    display: block;
+    font-size: rem(12);
+		letter-spacing: rem(5);
+		text-transform: uppercase;
+  }
+  
+  &__stats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: rem(12);
+    font-family: var(--font-Bold);
+
+    &--up{
+      color: var(--limeGreen);
+    }
+    &--down{
+      color: var(--brightRed);
+    }
+  }
+
+  &__arrow{
+    display: flex;
+    margin-right: rem(5);
+  }
+
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    &:not(:last-child){
+      align-items: center;
+      margin-bottom: rem(32);
+    }
+    
+    .card__username,
+    .card__number{
+      margin: 0;
+    }
+  }
+
+}

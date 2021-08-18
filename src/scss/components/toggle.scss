@@ -7,14 +7,14 @@
   justify-content: space-between;
   align-items: center;
   height: rem(25);
-  transition: all .4s ease;
+  cursor: pointer;
 
   input[name="theme"]{
     opacity: 0;
     margin: 0;
     width: 100%;
     height: 100%;
-    transition: all .4s ease;
+    cursor: pointer;
     &:checked ~ .toggle__button{
       left: rem(3);
     }
@@ -24,8 +24,8 @@
   }
   &__label{
     color: var(--color-secondary);
+    font-family: var(--font-Bold);
     margin-right: rem(15);
-    transition: all .4s ease;
   }
   &__wrapper{
    position: relative;
@@ -33,6 +33,9 @@
    width: rem(50);
    background: var(--toggle-bg);
    border-radius: rem(25);
+   &:hover{    
+    background: linear-gradient( 225deg, var(--toggle-bg-end) 0%, var(--toggle-bg-start) 98.02%);
+   }
   }
 
   &__button{
@@ -43,6 +46,6 @@
 		height: rem(18);
 		border-radius: 50%;
 		background-color: var(--body-bg-secondary);
-		transition: left .4s ease;
+		transition: all .4s ease;
   }
 }

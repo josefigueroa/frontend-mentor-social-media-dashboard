@@ -1,16 +1,42 @@
+@use '../abstratcs/' as *;
+
 [theme="dark"]{
   --body-bg: var(--charade);
   --body-bg-secondary: var(--steelGray);
 	--color-primary: var(--blueBell);
   --color-secondary: var(--white);
   --toggle-bg: linear-gradient( 225deg, var(--toggle-bg-end) 0%, var(--toggle-bg-start) 98.02%);
+  --card-bg: var(--ebonyClay);
+  --card-bg-hover: var(--oxfordBlue);
 }
+
 html{
   transition: all .5s ease-in;
 }
+
 body{
   font-family: var(--font-Regular);
   background: var(--body-bg);
   color: var(--color-primary);
   transition: all .5s ease-in;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main{
+  flex: 1;
+  margin-bottom: rem(25);
+}
+
+a{
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+section{
+  &:not(:last-child){
+    margin-bottom: rem(50);  
+  }
 }
