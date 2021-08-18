@@ -27,5 +27,9 @@
     "gulp-terser": "^2.0.1",
     "postcss": "^8.3.6",
     "sass": "^1.37.5"
+  },
+  "dependencies": {
+    "del": "^6.0.0",
+    "gulp-mode": "^1.1.0"
   }
 }
