@@ -9,7 +9,7 @@ export class Theme {
         document.body.setAttribute('theme', 'dark');
         document.querySelector('input[name="theme"]').checked = true;    
     }else{
-      document.body.setAttribute('theme', '');
+      document.body.setAttribute('theme', 'light');
       document.querySelector('input[name="theme"]').checked = false;   
     }
 
@@ -23,7 +23,7 @@ export class Theme {
         document.body.setAttribute('theme', event.target.value);
         localStorage.setItem('theme', 'on');   
       }else{
-        document.body.setAttribute('theme', '');
+        document.body.setAttribute('theme', 'light');
         localStorage.setItem('theme', 'off');  
       }        
     });
